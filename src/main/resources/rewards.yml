@@ -1,0 +1,35 @@
+rewards:
+  name-of-reward:
+    commands:
+      - '[player] spawn'
+      - '[console] eco give {player} 500'
+    messages:
+      - '[player] &dGood job!'
+      - '[player] [actionbar] &7Level &d{level}'
+      - '[player] [title] &dLevel Up!<n>You are now level {level}'
+      - '[C] &d{player} &7has reached &d{level}&7!'
+    sound:
+      sound-effect: ''
+      volume: 1
+      pitch: 1
+    levels: '1, 8'
+
+  reward-2:
+    commands:
+      - '[player] spawn'
+      - '[console] eco give {player} 700'
+    messages:
+      - '[player] &dGood job!'
+      - '[player] [actionbar] &7Level &d{level}'
+      - '[player] [title] &dLevel Up!<n>You are now level {level}'
+      - '[C] &d{player} &7has reached &d{level}&7!'
+    sound:
+      sound-effect: ''
+      volume: 1
+      pitch: 1
+    levels:
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
