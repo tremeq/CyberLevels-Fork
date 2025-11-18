@@ -1,0 +1,76 @@
+config:
+  # Should data be stored in MySQL?
+  # Tested on MySQL 10.4 and MariaDB 10.6.
+  mysql:
+    enabled: true
+    type: SQLITE # Can also be MARIADB, SQLITE, POSTGRES, POSTGRESQL
+    host: 'localhost'
+    port: '3306'
+    database: 'cyberlevels'
+    username: 'username'
+    password: 'password'
+    table: 'levels'
+    ssl: true
+    sqlite-file: "plugins/CyberLevels/data.db"
+
+  use-big-decimal-system: false
+
+  # Should numbers be rounded?
+  round-evaluation:
+    enabled: true
+
+    # Should exp earned in earn-exp.yml be rounded?
+    round-earn-exp: true
+
+    # 2 digits: #.##, 4 digits: #.####
+    digits: 2
+
+  earn-exp:
+    # Should decimals be rounded to the nearest integer?
+    integer-only: false
+
+  leaderboard:
+    # This feature has been shown to be stable. Please
+    # continue using at your own discretion.
+    enabled: true
+
+    # Should the leaderboard sync with your storage
+    # system when the auto-save is called?
+    sync-on-auto-save: true
+
+    instant-update: true
+
+  # Should player data be auto-saved?
+  auto-save:
+    enabled: true
+
+    # How often (in seconds)?
+    interval: 300
+
+  # Should adding levels give rewards?
+  add-level-reward: false
+
+  # Should getting rewards multiple times per
+  # level be prevented?
+  prevent-duplicate-rewards: false
+
+  # Should messages stack exp if it is within 650ms
+  # of the last exp gain/loss?
+  stack-combo-exp: true
+
+  multipliers:
+    # Should multipliers apply to the following?
+    commands: false
+    events: true
+
+  auto-update:
+    config: true
+    lang: true
+    earn-exp: true
+
+  messages:
+    # Should auto-save messages send to console?
+    auto-save: true
+
+    # Should general messages send to console?
+    message-console: true
